@@ -89,7 +89,7 @@ if __name__ == "__main__":
 
         current_time = time()
         audio = elevenlabs.generate(
-            text=response, voice="Ankita", model="eleven_monolingual_v1"
+            text=response, voice="Alice", model="eleven_monolingual_v1"
         )
         elevenlabs.save(audio, "audio/response.wav")
         audio_time = time() - current_time
@@ -103,3 +103,4 @@ if __name__ == "__main__":
         sound.play()
         pygame.time.wait(int(sound.get_length() * 1000))
         print(f"\n --- USER: {string_words}\n --- MAUVE: {response}\n")
+
